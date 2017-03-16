@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="redesign no-js" data-ffo-opensans="false" data-ffo-opensanslight="false">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>JavaScript | MDN</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="/zh-CN/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    
+    <link href="https://developer.cdn.mozilla.net/static/build/styles/mdn.73cbd11a5382.css" rel="stylesheet" type="text/css" />
+
+    
+  
+    <link href="https://developer.cdn.mozilla.net/static/build/styles/wiki.72ee54c7bfeb.css" rel="stylesheet" type="text/css" />
+
+    
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla 开发者网络">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/zh-CN/search/xml" title="Mozilla 开发者网络">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="https://developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="https://developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/font-check.77286577b47f.js" charset="utf-8"></script>
+
+  
+  <link rel="alternate" type="application/json" href="/zh-CN/docs/Web/JavaScript$json">
+  <link rel="canonical" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" >
+
+  
+    
+      <link rel="alternate" hreflang="en-US" href="/en-US/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="ar" href="/ar/docs/Web/JavaScript" title="جافا سكريبت">
+    
+      <link rel="alternate" hreflang="bm" href="/bm/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="bn-BD" href="/bn-BD/docs/Web/JavaScript" title="জাভাস্ক্রিপ্ট">
+    
+      <link rel="alternate" hreflang="bn-IN" href="/bn-IN/docs/Web/%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%8D%E0%A6%9F" title="জাভাস্ক্রিপ্ট">
+    
+      <link rel="alternate" hreflang="ca" href="/ca/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="cs" href="/cs/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="de" href="/de/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="el" href="/el/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="es" href="/es/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="fa" href="/fa/docs/Web/JavaScript" title="جاوا اسکریپت">
+    
+      <link rel="alternate" hreflang="fr" href="/fr/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="he" href="/he/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="hi-IN" href="/hi-IN/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="hu" href="/hu/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="id" href="/id/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="it" href="/it/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="ja" href="/ja/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="ka" href="/ka/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="kab" href="/kab/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="ko" href="/ko/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="ms" href="/ms/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="my" href="/my/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="nl" href="/nl/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="pl" href="/pl/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="pt-BR" href="/pt-BR/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="pt-PT" href="/pt-PT/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="ro" href="/ro/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="ru" href="/ru/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="sv-SE" href="/sv-SE/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="ta" href="/ta/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="th" href="/th/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="tr" href="/tr/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="uk" href="/uk/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="vi" href="/vi/docs/Web/JavaScript" title="JavaScript">
+    
+      <link rel="alternate" hreflang="zh-TW" href="/zh-TW/docs/Web/JavaScript" title="JavaScript">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="JavaScript">
+  <meta property="og:url" content="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">
+  <meta name="twitter:url" content="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">
+  <meta name="twitter:title" content="JavaScript">
+  
+  <meta property="og:description" content="本部分将专注于 JavaScript 语言本身，而非局限于网页或其他宿主环境。想要了解网页有关的 APIs ，请参考 Web APIs 以及 DOM 。">
+  <meta name="description" content="本部分将专注于 JavaScript 语言本身，而非局限于网页或其他宿主环境。想要了解网页有关的 APIs ，请参考 Web APIs 以及 DOM 。">
+  <meta name="twitter:description" content="本部分将专注于 JavaScript 语言本身，而非局限于网页或其他宿主环境。想要了解网页有关的 APIs ，请参考 Web APIs 以及 DOM 。">
+  
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+
+
+  
+    
+
+<script type="text/javascript">
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-36116321-5', 'mozilla.org');
+    ga('set', 'anonymizeIp', true);
+
+    
+
+    // dimension9 == "Section editing"
+    
+        ga('set', 'dimension9', 'Enabled');
+    
+        // dimension12 == 'Page Revision"
+        ga('set', 'dimension12', '1217017');
+
+    (function() {
+        // http://cfsimplicity.com/61/removing-analytics-clutter-from-campaign-urls
+        var win = window;
+        var removeUtms = function(){
+            var location = win.location;
+            if (location.href.indexOf('utm') != -1 && win.history.replaceState) {
+                win.history.replaceState({}, '', location.pathname);
+            }
+        };
+
+        ga('send', 'pageview', {'hitCallback': removeUtms});
+    })();
+</script>
+
+  
+</head>
+<body data-slug="Web/JavaScript" contextmenu="edit-history-menu" data-search-url="" class="document  ">
+
+  <script type="text/javascript">
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': false,'helpful-survey-2': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = '/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.cdn.mozilla.net/static/';
+        win.mdn.optimizely = win['optimizely'] || [];
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/zh-CN/docs/get-documents'
+        };
+        win.mdn.assets = {
+            css: {
+                'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.6407e9c3e0b6.css',],
+                'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.6bcbd7e219b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.66bd4038bff3.js',],
+                'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">跳到主要内容</a></li>
+    <li><a id="skip-language" href="#language">选择语言</a></li>
+    <li><a href="#q" id="skip-search">跳到搜索</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="//www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+
+    <a href="/zh-CN/" class="logo">Mozilla 开发者网络</a>
+
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+        
+        <a href="/users/github/login/?next=%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript" class="login-link js-login-link" data-service="GitHub">
+            登录
+            <i class="icon-github" aria-hidden="true"></i>
+        </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="/zh-CN/docs/Web">网络技术<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">技术</div>
+            <ul>
+              <li><a href="/zh-CN/docs/Web/HTML">HTML</a></li>
+              <li><a href="/zh-CN/docs/Web/CSS">CSS</a></li>
+              <li><a href="/zh-CN/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="/zh-CN/docs/Web/Guide/Graphics">图像</a></li>
+              <li><a href="/zh-CN/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="/zh-CN/docs/Web/API">API / DOM</a></li>
+              <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions">Web扩展</a></li>
+              <li><a href="/zh-CN/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">参考和指引</div>
+            <ul>
+              <li><a href="/zh-CN/docs/Learn">学习 web 开发</a></li>
+              <li><a href="/zh-CN/docs/Web/Tutorials">教程</a></li>
+              <li><a href="/zh-CN/docs/Web/Reference">参考文献</a></li>
+              <li><a href="/zh-CN/docs/Web/Guide">开发者指南</a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility">无障碍环境</a></li>
+              <li><a href="/zh-CN/docs/Games">游戏开发</a></li>
+              <li><a href="/zh-CN/docs/Web">...更多文档</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="/zh-CN/docs/Zones">Mozilla 文档<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="/zh-CN/docs/Mozilla/Add-ons">附加组件</a></li>
+              <li><a href="/zh-CN/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="/zh-CN/docs/Tools">开发者工具</a></li><li><a href="/zh-CN/docs/MDN/Feedback">反馈<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">获取 Firefox 帮助<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">获取 Web 开发帮助<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="/zh-CN/docs/MDN/Community">加入 MDN 社区</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/zh-CN/docs/Web/JavaScript">报告内容问题<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">报告缺陷<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="/zh-CN/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="/zh-CN/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">搜索</label>
+          <input type="search" id="main-q" name="q" placeholder="搜索" data-value="" value="" />
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">搜索</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+   <!-- end is_zone -->
+
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>语言</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="/en-US/docs/Web/JavaScript" title="英语 (美国)">English (US) (en-US)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/ar/docs/Web/JavaScript" title="阿拉伯语">عربي (ar)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/bm/docs/Web/JavaScript" title="班巴拉语">Bamanankan (bm)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/bn-BD/docs/Web/JavaScript" title="孟加拉语 (孟加拉)">বাংলা (বাংলাদেশ) (bn-BD)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/bn-IN/docs/Web/%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%8D%E0%A6%9F" title="孟加拉语 (印度)">বাংলা (ভারত) (bn-IN)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/ca/docs/Web/JavaScript" title="加泰罗尼亚语">Català (ca)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/cs/docs/Web/JavaScript" title="捷克语">Čeština (cs)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/de/docs/Web/JavaScript" title="德语">Deutsch (de)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/el/docs/Web/JavaScript" title="希腊语">Ελληνικά (el)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/es/docs/Web/JavaScript" title="西班牙语">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/fa/docs/Web/JavaScript" title="波斯语">فارسی (fa)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/fr/docs/Web/JavaScript" title="法语">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/he/docs/Web/JavaScript" title="希伯来语">עברית (he)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/hi-IN/docs/Web/JavaScript" title="印地语 (印度)">हिन्दी (भारत) (hi-IN)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/hu/docs/Web/JavaScript" title="匈牙利语">magyar (hu)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/id/docs/Web/JavaScript" title="印尼语">Bahasa Indonesia (id)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/it/docs/Web/JavaScript" title="意大利语">Italiano (it)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/ja/docs/Web/JavaScript" title="日语">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/ka/docs/Web/JavaScript" title="格鲁吉亚语">ქართული (ka)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/kab/docs/Web/JavaScript" title="卡拜尔语">Taqbaylit (kab)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/ko/docs/Web/JavaScript" title="朝鲜语">한국어 (ko)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/ms/docs/Web/JavaScript" title="马来语">Melayu (ms)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/my/docs/Web/JavaScript" title="缅甸语">မြန်မာဘာသာ (my)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/nl/docs/Web/JavaScript" title="荷兰语">Nederlands (nl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/pl/docs/Web/JavaScript" title="波兰语">Polski (pl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/pt-BR/docs/Web/JavaScript" title="葡萄牙语 (巴西)">Português (do Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/pt-PT/docs/Web/JavaScript" title="葡萄牙语 (葡萄牙)">Português (Europeu) (pt-PT)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/ro/docs/Web/JavaScript" title="罗马尼亚语">Română (ro)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/ru/docs/Web/JavaScript" title="俄语">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/sv-SE/docs/Web/JavaScript" title="瑞典语">Svenska (sv-SE)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/ta/docs/Web/JavaScript" title="泰米尔语">தமிழ் (ta)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/th/docs/Web/JavaScript" title="泰语">ไทย (th)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/tr/docs/Web/JavaScript" title="土耳其语">Türkçe (tr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/uk/docs/Web/JavaScript" title="乌克兰语">Українська (uk)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/vi/docs/Web/JavaScript" title="越南语">Tiếng Việt (vi)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/zh-TW/docs/Web/JavaScript" title="繁体中文">正體中文 (繁體) (zh-TW)</a></bdi></li>
+                
+              
+
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="/zh-CN/docs/Web/JavaScript$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button" rel="nofollow, noindex">编辑<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>高级</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">高级</div>
+            <ul>
+                <li><a href="/zh-CN/docs/Web/JavaScript$history" rel="nofollow, noindex">历史记录</a></li>
+                
+                
+                
+
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">打印此文章</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="面包屑导航">
+    <li typeof="v:Breadcrumb"><a href="/zh-CN" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="/zh-CN/docs/Web" rel="v:url" property="v:title">Web 技术文档</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">JavaScript</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="前一个搜索结果" data-empty-title="没有更靠前的搜索结果"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">您的搜索结果</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="后一个搜索结果" data-empty-title="没有更靠前的搜索结果"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="查看所有贡献者" data-alternate-message="隐藏贡献者" data-has-hidden="1">
+            <ul>
+            
+                <li class="shown">
+                <a href="/zh-CN/profiles/lemonsWen" title="查看个人资料：lemonsWen">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="lemonsWen" data-src="https://secure.gravatar.com/avatar/924a5d87e64636104055cde35b0c1394?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">lemonsWen</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="/zh-CN/profiles/lppking" title="查看个人资料：lppking">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="lppking" data-src="https://secure.gravatar.com/avatar/a4b390361b6730ea9854654649c03a4e?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">lppking</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="/zh-CN/profiles/viko16" title="查看个人资料：viko16">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="viko16" data-src="https://secure.gravatar.com/avatar/687cd5c5617b4b4832b6c47452496d30?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">viko16</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="/zh-CN/profiles/Cnmahj" title="查看个人资料：Cnmahj">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Cnmahj" data-src="https://secure.gravatar.com/avatar/2d32943929ccf79330beb12bc84b5154?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Cnmahj</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="/zh-CN/profiles/leafdog" title="查看个人资料：leafdog">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="leafdog" data-src="https://secure.gravatar.com/avatar/7ad7509f0014b0b3ee492386a1970a52?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">leafdog</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="/zh-CN/profiles/Ende93" title="查看个人资料：Ende93">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Ende93" data-src="https://secure.gravatar.com/avatar/f6204ddd5f1688a11e4674295f2637fa?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Ende93</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/VdoG" title="查看个人资料：VdoG">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="VdoG" data-src="https://secure.gravatar.com/avatar/c3ed3a1614139094a2e2bde19516b4bf?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">VdoG</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/xiaokk06" title="查看个人资料：xiaokk06">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="xiaokk06" data-src="https://secure.gravatar.com/avatar/c2162aae00a1993d8078c6a924ff4af5?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">xiaokk06</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/xgqfrms" title="查看个人资料：xgqfrms">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="xgqfrms" data-src="https://secure.gravatar.com/avatar/3db6c24b48f7270d47f56abeb6a7cfcb?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">xgqfrms</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/Rusion-Wayne" title="查看个人资料：Rusion-Wayne">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Rusion-Wayne" data-src="https://secure.gravatar.com/avatar/b4fbf4fa87eaeba2e780a9a6758fce5e?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Rusion-Wayne</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/xiaoyusilen" title="查看个人资料：xiaoyusilen">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="xiaoyusilen" data-src="https://secure.gravatar.com/avatar/7444825325c5a4643338c1362c3a7647?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">xiaoyusilen</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/Moressette" title="查看个人资料：Moressette">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Moressette" data-src="https://secure.gravatar.com/avatar/912a51456862a610eb2f8a140d6c6d93?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Moressette</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/simongfxu" title="查看个人资料：simongfxu">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="simongfxu" data-src="https://secure.gravatar.com/avatar/2e6fb1b126889da532d230f7d847ddab?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">simongfxu</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/eforegist" title="查看个人资料：eforegist">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="eforegist" data-src="https://secure.gravatar.com/avatar/fd73db22a9f154036fbe97db841f0704?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">eforegist</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/nperhb" title="查看个人资料：nperhb">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="nperhb" data-src="https://secure.gravatar.com/avatar/eebad34cb08fa08cfc181a66c0be09bf?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">nperhb</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/wth" title="查看个人资料：wth">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="wth" data-src="https://secure.gravatar.com/avatar/1a9adfa9ba9060c8ff67a3abceb5e25f?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">wth</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/WentaoMa" title="查看个人资料：WentaoMa">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="WentaoMa" data-src="https://secure.gravatar.com/avatar/24d037cca4e458a158a3c4515c8db477?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">WentaoMa</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/Roland_Reed" title="查看个人资料：Roland_Reed">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Roland_Reed" data-src="https://secure.gravatar.com/avatar/ca33383daac643508bce124ff2a4c218?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Roland_Reed</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/ngtmuzi" title="查看个人资料：ngtmuzi">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="ngtmuzi" data-src="https://secure.gravatar.com/avatar/b307b96520199a2b3e75316b80291b28?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">ngtmuzi</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/leonine" title="查看个人资料：leonine">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="leonine" data-src="https://secure.gravatar.com/avatar/a5ab8d78bfa98a1cf155a333fbbfcfc0?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">leonine</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/stdupp" title="查看个人资料：stdupp">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="stdupp" data-src="https://secure.gravatar.com/avatar/d9dec8600c34ff6d56a640d203be4f3a?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">stdupp</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/lunix01" title="查看个人资料：lunix01">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="lunix01" data-src="https://secure.gravatar.com/avatar/2aec0287cda7669db5ff88eafb1af80e?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">lunix01</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/sammuelyee" title="查看个人资料：sammuelyee">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="sammuelyee" data-src="https://secure.gravatar.com/avatar/90f4139ce146535a502bed7dc4bf1c2e?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">sammuelyee</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/MMOnster" title="查看个人资料：MMOnster">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="MMOnster" data-src="https://secure.gravatar.com/avatar/36968a635ffb47c324ce8bcf8f5ccf32?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">MMOnster</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/redman9" title="查看个人资料：redman9">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="redman9" data-src="https://secure.gravatar.com/avatar/49a6933a11e99dd14469174f1d964132?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">redman9</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/wangsai" title="查看个人资料：wangsai">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="wangsai" data-src="https://secure.gravatar.com/avatar/d3c28b17c1b47371ec868512bd57da37?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">wangsai</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/flyingdew" title="查看个人资料：flyingdew">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="flyingdew" data-src="https://secure.gravatar.com/avatar/ca36b81912b66fac7e895cae87605cff?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">flyingdew</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/Yaty" title="查看个人资料：Yaty">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Yaty" data-src="https://secure.gravatar.com/avatar/5ad0e0083ff07483db10d5c878faa769?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Yaty</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/yenshen" title="查看个人资料：yenshen">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="yenshen" data-src="https://secure.gravatar.com/avatar/41e41db0d4f73533bf608a7f0c874c5b?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">yenshen</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/apollo" title="查看个人资料：apollo">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="apollo" data-src="https://secure.gravatar.com/avatar/81289c9aa9e637ac8e2f753d1e7d85ed?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">apollo</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/azzndmy" title="查看个人资料：azzndmy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="azzndmy" data-src="https://secure.gravatar.com/avatar/2c0510827bf552747a590c2d8b49b775?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">azzndmy</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/yiding_he" title="查看个人资料：yiding_he">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="yiding_he" data-src="https://secure.gravatar.com/avatar/1f48c167585258bf3da1a238153e9b4c?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">yiding_he</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/Brainor" title="查看个人资料：Brainor">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Brainor" data-src="https://secure.gravatar.com/avatar/712ab366dbc8d718c6a9d8bb8a6bbd3f?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Brainor</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/ReyCG_sub" title="查看个人资料：ReyCG_sub">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="ReyCG_sub" data-src="https://secure.gravatar.com/avatar/669919e44a0e3fe8b5f9e04a1845deee?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">ReyCG_sub</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/teoli" title="查看个人资料：teoli">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="teoli" data-src="https://secure.gravatar.com/avatar/d0d90148e08e3b64ccf75c46f31442c5?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">teoli</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/7anshuai" title="查看个人资料：7anshuai">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="7anshuai" data-src="https://secure.gravatar.com/avatar/5fdc5b1b2e124babe45eccb3f7b7cf49?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">7anshuai</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/xcffl" title="查看个人资料：xcffl">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="xcffl" data-src="https://secure.gravatar.com/avatar/16ef6d47b095bdd2c5c893f21ae01f43?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">xcffl</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/ziyunfei" title="查看个人资料：ziyunfei">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="ziyunfei" data-src="https://secure.gravatar.com/avatar/2dbf9c055c2b32d3ca45d25be0117423?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">ziyunfei</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/Asvel" title="查看个人资料：Asvel">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Asvel" data-src="https://secure.gravatar.com/avatar/936aea245844deee61c4ddea6e30d479?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Asvel</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/sonzero@163.com" title="查看个人资料：sonzero@163.com">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="sonzero@163.com" data-src="https://secure.gravatar.com/avatar/fe9393378ea85e558f2462e6d55956eb?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">sonzero@163.com</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/xiaoxiong" title="查看个人资料：xiaoxiong">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="xiaoxiong" data-src="https://secure.gravatar.com/avatar/bb6dcfd347a82aa7deae5cd376e55244?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">xiaoxiong</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/iwo" title="查看个人资料：iwo">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="iwo" data-src="https://secure.gravatar.com/avatar/c74fa2f24733003c67dc623fab9ab5f7?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">iwo</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/zh-CN/profiles/lins05" title="查看个人资料：lins05">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="lins05" data-src="https://secure.gravatar.com/avatar/cfe0f2a106eb3f6ea71516d7e4ff12ec?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">lins05</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>JavaScript</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-closed wiki-right-none wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+              
+
+              
+
+              
+                
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div><section class="Quick_links" id="Quick_Links"><!-- --></section></div>
+
+<div class="summary">
+<p><strong>JavaScript ( </strong><strong>JS </strong>) 是一种轻量级解释型的，或是JIT编译型的程序设计语言，有着 <a href="/en-US/docs/Glossary/First-class_Function" class="glossaryLink" title="函数优先 (First-class Function): A programming language is said to have First-class functions when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.">函数优先 (First-class Function)</a> 的编程语言。虽然它是作为开发web页面的脚本语言而出名的，但是在很多<a href="http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages" class="external">非浏览器环境</a>中也使用JavaScript，例如 <a href="http://nodejs.org/" class="external">node.js</a> 和 <a href="http://couchdb.apache.org" class="external">Apache CouchDB</a>。JS是一种<a href="/en-US/docs/Glossary/Prototype-based_programming" class="glossaryLink" title="基于原型: Prototype-based programming is a style of object-oriented programming in which classes are not explicitly defined, but rather derived by adding properties and methods to an instance of another class or, less frequently, add them to an empty object.">基于原型</a>、多范式的动态脚本语言，并且支持面向对象、命令式和声明式（如：函数式编程）编程风格。了解更多<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/About_JavaScript"> 关于JavaScript</a>。</p>
+</div>
+
+<p>本部分将专注于 JavaScript 语言本身，而非局限于网页或其他宿主环境。想要了解网页有关的 <a href="/en-US/docs/Glossary/API" class="glossaryLink" title="APIs: An API (Application Programming Interface) is a set of features and rules that exist inside a software program enabling interaction between the software and other items, such as other software or hardware.">APIs</a> ，请参考 <a href="/zh-CN/docs/Web/API">Web APIs</a> 以及 <a href="/zh-CN/docs/Glossary/DOM">DOM</a>。</p>
+
+<p><a href="/zh-CN/docs/Web/JavaScript/Language_Resources">ECMAScript</a> 是 JavaScript 的标准。截至 2012 年，所有的<a href="http://kangax.github.io/compat-table/es5/" class="external">现代浏览器</a>都完整了支持  ECMAScript 5.1，旧式的浏览器至少支持 ECMAScript 3 标准。在2015年6月17日，<a href="http://www.ecma-international.org" class="external">ECMA国际组织</a>发布了 ECMAScript 的第六版，该版本正式名称为ECMAScript 2015，但通常���称为 ECMAScript 6 或者ES6。自此，ECMAScript每年发布一次新标准。本文档目前覆盖了最新ECMAScript的草案，也就是<a href="http://tc39.github.io/ecma262/" class="external">ECMAScript2017</a>。</p>
+
+<p>不要将 JavaScript 与 <a href="http://en.wikipedia.org/wiki/Java_(programming_language)" class="external">Java 编程语言</a>混淆。虽然“Java”和“JavaScript”都是 Oracle 公司在美国和其他国家注册（或未注册）的商标，但是这两门语言在语法、语义与用途方面有很大不同。</p>
+
+<div class="column-container">
+<div class="column-half">
+<h2 id="教程">教程</h2>
+
+<p>学习使用指南和教程去编写JavaScript程序。</p>
+
+<h3 id="为初学者准备">为初学者准备</h3>
+
+<p>如果你想学习JavaScript，苦于没有过JavaScript或者其他语言的编程经验，你可以你可以投入到我们的<a href="/zh-CN/docs/Learn/JavaScript">JavaScript 主题学习区</a>。那里有完整的学习资源：</p>
+
+<dl>
+ <dt><a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 起步</a></dt>
+ <dd>回答一些基本问题，比如“JavaScript 是什么？”、“和什么相似？”、“可以做什么？”；同时还讨论如变量、字符串、数值和数组等 JavaScript 的关键特性。</dd>
+ <dt><a href="/zh-CN/docs/Learn/JavaScript/Building_blocks">JavaScript 基本结构</a></dt>
+ <dd>继介绍了 JavaScript 基本的关键特性后，将我们的注意力转移到常见的诸如条件判断语句、循环、函数、事件等代码块儿类型上。</dd>
+ <dt><a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript 对象介绍</a></dt>
+ <dd>如果你想进一步使用该语言撰写更有效率的代码，理解 JavaScript 面向对象的精髓是很重要的，因此我们提供了该模块来帮助你理解它。</dd>
+</dl>
+
+<h3 id="JavaScript_指南">JavaScript 指南</h3>
+
+<dl>
+ <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide">JavaScript 指南</a></dt>
+ <dd>一份更详尽的 JavaScript 指南，适用于有过 JavaScript 或其他语言编程经验的读者。</dd>
+</dl>
+
+<h3 id="中级内容">中级内容</h3>
+
+<dl>
+ <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript">JavaScript 深入理解</a></dt>
+ <dd>为那些有 JavaScript 基础的朋友们深入介绍 JavaScript。</dd>
+</dl>
+
+<dl>
+ <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures">JavaScript 数据结构</a></dt>
+ <dd>JavaScript 数据结构的概览</dd>
+ <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them">如何使用比较操作符</a></dt>
+ <dd>JavaScript 提供了三种比较操作符，包括严格比较操作符 <code>===</code> 和非严格的比较操作符 <code>==，以及 </code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="Object.is() 方法用来判断两个值是否是同一个值。"><code>Object.is()</code></a> 方法。</dd>
+</dl>
+
+<h3 id="高级内容">高级内容</h3>
+
+<dl>
+ <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">继承和原型的链式结构</a></dt>
+ <dd>给受到普遍误解和低估的基于原型的继承做一个详细解释。</dd>
+ <dt><a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a></dt>
+ <dd>严格模式规定不能使用未定义的变量。严格模式是对ECMAScript 5 的严格限制，以求得更高效的性能和更便利的调试。</dd>
+ <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Typed_arrays">JavaScript 类型数组</a></dt>
+ <dd>为使 JavaScript 处理原始二进制数据而提供的类型数组。</dd>
+ <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Memory_Management">内存管理</a></dt>
+ <dd>JavaScript 中的内存生命周期和垃圾回收机制。</dd>
+ <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop">并发模型以及事件循环</a></dt>
+ <dd>JavaScript 现加入了基于“事件循环”的并发模型。</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<h2 id="参考">参考</h2>
+
+<p>浏览完整的 <a href="/zh-CN/docs/Web/JavaScript/Reference">Javascript 参考</a>文档。</p>
+
+<dl>
+ <dt><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects">标准对象 </a></dt>
+ <dd>标准的内置对象例如 <a href="/zh-CN/docs/Web/JavaScript/Reference/Array" title="entries() 方法返回一个新的Array Iterator对象，该对象包含数组中每个索引的键/值对。"><code>Array</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Boolean" title="此页面仍未被本地化, 期待您的翻译!"><code>Boolean</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Date" title="此页面仍未被本地化, 期待您的翻译!"><code>Date</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error" title="通过Error的构造器可以创建一个错误对象。当运行时错误产生时，Error的实例对象会被抛出。Error对象可用于用户自定义的异常的基础对象。下面列出了各种内建的标准错误类型。"><code>Error</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Function" title="此页面仍未被本地化, 期待您的翻译!"><code>Function</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON" title="JSON 对象包含用于解析 JavaScript Object Notation  (JSON) 的方法，并将值转换为JSON。这个对象本身不能被调用或者作为构造函数，除了它的两个方法属性，它没有本身没有什么有用的功能。"><code>JSON</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math" title="Math 是一个内置对象， 为数学常量和数学函数提供了属性和方法，而不是一个函数对象。"><code>Math</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number" title="JavaScript 的 Number 对象是经过封装的能让你处理数字值的对象。Number 对象由 Number() 构造器创建。"><code>Number</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object" title="Object 构造函数创建一个对象包装器。"><code>Object</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/RegExp" title="此页面仍未被本地化, 期待您的翻译!"><code>RegExp</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/String" title="此页面仍未被本地化, 期待您的翻译!"><code>String</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Map" title="此页面仍未被本地化, 期待您的翻译!"><code>Map</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set" title="集合（Set）对象允许你存储任意类型的唯一值（不能重复），无论它是原始值或���是对象引用。"><code>Set</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/WeakMap" title="此页面仍未被本地化, 期待您的翻译!"><code>WeakMap</code></a> , <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakSet" title="一个 WeakSet 对象是一个无序的集合, 可以用它来存储任意的对象值, 并且对这些对象值保持弱引用."><code>WeakSet</code></a> 以及其他对象</dd>
+ <dt><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators">表达式和运算符</a></dt>
+ <dd>运算符的作用：<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof" title="instanceof 运算符用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性。"><code>instanceof</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof" title="typeof操作符返回一个字符串,指示未经计算的操作数的类型。"><code>typeof</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new" title="(new operator) 新运算符创建一个用户定义的对象类型的实例或具有构造函数的内置对象类型之一。"><code>new</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/this" title="与其他语言相比，函数的 this 关键字在JavaScript中的行为略有不同。它在严格模式和非严格模式之间也有一些区别。"><code>this</code></a>，<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">运算符优先级</a>，以及其他运算符。</dd>
+ <dt><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements">语句和声明</a></dt>
+ <dd>了解 <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/do...while" title="do...while 语句创建了一个循环,该循环执行一个指定的语句直到condition 的值为 false. condition 在执行statement后才会被赋值,statement至少执行一次."><code>do-while</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in" title="以任意序迭代一个对象的可枚举属性。每个不同的属性，语句都会被执行一次。"><code>for-in</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of" title="for...of语句在可迭代对象(包括 Array, Map, Set, String, TypedArray，arguments 对象等等)上创建一个迭代循环，对每个不同属性的属性值,调用一个自定义的有执行语句的迭代挂钩."><code>for-of</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch" title="try...catch语句将能引发错误的代码放在try块中，并且对应一个响应，然后有异常被抛出。"><code>try-catch</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/let" title="let允许你声明一个作用域被限制在块级中的变量、语句或者表达式。与var关键字不同的是，var声明的变量只能是全局或者整个函数块的。"><code>let</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/var" title="var声明了一个变量，并且可以同时初始化该变量。"><code>var</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/const" title="Editorial review completed."><code>const</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else" title="当指定条件为 true 时，if 语句 会执行一条语句。如果该条件为 false，则执行另一条语句。"><code>if-else</code></a>, <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/switch" title="switch语句对一个表达式求值，将结果与 case 子语句比较，如果匹配，则从 case 处的语句向下执行。"><code>switch</code></a> 以及其他语句和关键字的作用。</dd>
+ <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions">函数</a></dt>
+ <dd>学习如何使用 JavaScript 函数来开发你的应用。</dd>
+</dl>
+
+<h2 id="工具和资源">工具和资源</h2>
+
+<p>有助于您编写和调试 JavaScript 代码的有用工具。</p>
+
+<dl>
+ <dt><a href="https://developer.mozilla.org/zh-CN/docs/Tools">Firefox 开发工具</a></dt>
+ <dd>包括 <a href="/zh-CN/docs/Tools/Scratchpad">Scratchpad</a>, <a href="/zh-CN/docs/Tools/Web_Console">Web Console</a>, <a href="/zh-CN/docs/Tools/Profiler">JavaScript Profiler</a>, <a href="/zh-CN/docs/Tools/Debugger">Debugger</a> 等等</dd>
+ <dt><a href="http://www.getfirebug.com/" class="external">Firebug</a></dt>
+ <dd>在任何页面中实时编写、调试和模拟 CSS、HTML 及 JavaScript。</dd>
+ <dt><a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/shells">JavaScript Shells</a></dt>
+ <dd>允许您快速测试 JavaScript 代码片段的运行环境。</dd>
+ <dt><a href="https://togetherjs.com/" class="external">TogetherJS</a></dt>
+ <dd>
+ <p class="hero-header-text large">添加TogetherJS到您的网站，让用户实时互助，协作更简单。</p>
+ </dd>
+ <dt><a href="http://stackoverflow.com/questions/tagged/javascript" class="external">Stack Overflow</a></dt>
+ <dd>StackOverflow 上的 JavaScript 问答。</dd>
+ <dt><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript">JavaScript版本和发行记录</a></dt>
+ <dd>浏览 JavaScript的历史版本特性和实现情况.</dd>
+ <dt><a href="https://jsfiddle.net/" class="external">JSFiddle</a></dt>
+ <dd>编辑 JavaScript, CSS, HTML 并获得实时结果。使用外置资源，并和你的团队在线合作。</dd>
+</dl>
+</div>
+</div>
+
+<p></p><div class="overheadIndicator communitybox">
+
+    <div class="column-container">
+        <h2 id="加入_JavaScript_社区">加入 JavaScript 社区</h2>
+        <div class="column-half">
+            <div class="communitysubhead">请选择你喜欢的方式加入我们：</div>
+            <ul class="communitymailinglist">
+  <li><a href="https://lists.mozilla.org/listinfo/js-engine.internals" class="external"> 邮件列表</a></li>
+  
+  
+  <li><a href="http://groups.google.com/group/mozilla.dev.tech.js-engine.internals" class="external"> Google Group（中文）</a></li>
+  <li><a href="http://groups.google.com/group/mozilla.dev.tech.js-engine.internals/feeds" class="external"> Web feed</a></li>
+</ul>
+        </div>
+        <div class="column-half">
+            <ul class="communitycontact"><li><strong>IRC: </strong><a href="irc://irc.mozilla.org/js">#js</a> <span class="smaller">(<a href="https://wiki.mozilla.org/IRC" class="external">了解 IRC</a>)</span></li><li><strong>ES讨论: </strong><a href="http://esdiscuss.org/" class="external" title="ECMAScript标准探讨邮件列表">esdiscuss.org</a></li><li><strong>SpiderMonkey: </strong><a href="https://wiki.mozilla.org/JavaScript" class="external" title="助力JavaScript引擎">项目主页</a></li><li><strong>Twitter: </strong><a href="https://twitter.com/SpiderMonkeyJS" class="external" title="SpiderMonkey updates on Twitter">@SpiderMonkeyJS</a></li></ul>
+        </div>
+    </div>
+</div><p></p>
+                  
+                
+
+              
+                <aside class="helpful-survey hidden" id="helpful-survey">
+                  <p>这篇文章有帮助吗？</p>
+
+                  <div class="helpful-survey-content">
+                    <div class="helpful-survey-buttons">
+                      <button type="button" class="helpful-survey-vote helpful-survey-yes">
+                        <span class="offscreen">是</span>
+                        <i class="icon-thumbs-o-up" aria-hidden="true"></i>
+                      </button>
+                      <button type="button" class="helpful-survey-vote helpful-survey-no">
+                        <span class="offscreen">否</span>
+                        <i class="icon-thumbs-o-down" aria-hidden="true"></i>
+                      </button>
+                    </div>
+
+                    <div class="helpful-survey-thankyou">谢谢！</div>
+                  </div>
+                </aside>
+              
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">文档标签和贡献者</h2>
+                  
+                  
+  <div class="tag-attach-list contributors-sub">
+    <i aria-hidden="true" class="icon-tags icon-fw"></i>
+    <strong>标签：</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="/zh-CN/docs/tag/JavaScript" rel="nofollow, noindex">JavaScript</a></li>
+      
+        <li><a href="/zh-CN/docs/tag/Landing" rel="nofollow, noindex">Landing</a></li>
+      
+        <li><a href="/zh-CN/docs/tag/%E5%85%A5%E9%97%A8" rel="nofollow, noindex">入门</a></li>
+      
+    </ul>
+  </div>
+
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>此页面的贡献者：</strong> 
+        <a href="/zh-CN/profiles/lemonsWen">lemonsWen</a>, 
+    
+        <a href="/zh-CN/profiles/lppking">lppking</a>, 
+    
+        <a href="/zh-CN/profiles/viko16">viko16</a>, 
+    
+        <a href="/zh-CN/profiles/Cnmahj">Cnmahj</a>, 
+    
+        <a href="/zh-CN/profiles/leafdog">leafdog</a>, 
+    
+        <a href="/zh-CN/profiles/Ende93">Ende93</a>, 
+    
+        <a href="/zh-CN/profiles/VdoG">VdoG</a>, 
+    
+        <a href="/zh-CN/profiles/xiaokk06">xiaokk06</a>, 
+    
+        <a href="/zh-CN/profiles/xgqfrms">xgqfrms</a>, 
+    
+        <a href="/zh-CN/profiles/Rusion-Wayne">Rusion-Wayne</a>, 
+    
+        <a href="/zh-CN/profiles/xiaoyusilen">xiaoyusilen</a>, 
+    
+        <a href="/zh-CN/profiles/Moressette">Moressette</a>, 
+    
+        <a href="/zh-CN/profiles/simongfxu">simongfxu</a>, 
+    
+        <a href="/zh-CN/profiles/eforegist">eforegist</a>, 
+    
+        <a href="/zh-CN/profiles/nperhb">nperhb</a>, 
+    
+        <a href="/zh-CN/profiles/wth">wth</a>, 
+    
+        <a href="/zh-CN/profiles/WentaoMa">WentaoMa</a>, 
+    
+        <a href="/zh-CN/profiles/Roland_Reed">Roland_Reed</a>, 
+    
+        <a href="/zh-CN/profiles/ngtmuzi">ngtmuzi</a>, 
+    
+        <a href="/zh-CN/profiles/leonine">leonine</a>, 
+    
+        <a href="/zh-CN/profiles/stdupp">stdupp</a>, 
+    
+        <a href="/zh-CN/profiles/lunix01">lunix01</a>, 
+    
+        <a href="/zh-CN/profiles/sammuelyee">sammuelyee</a>, 
+    
+        <a href="/zh-CN/profiles/MMOnster">MMOnster</a>, 
+    
+        <a href="/zh-CN/profiles/redman9">redman9</a>, 
+    
+        <a href="/zh-CN/profiles/wangsai">wangsai</a>, 
+    
+        <a href="/zh-CN/profiles/flyingdew">flyingdew</a>, 
+    
+        <a href="/zh-CN/profiles/Yaty">Yaty</a>, 
+    
+        <a href="/zh-CN/profiles/yenshen">yenshen</a>, 
+    
+        <a href="/zh-CN/profiles/apollo">apollo</a>, 
+    
+        <a href="/zh-CN/profiles/azzndmy">azzndmy</a>, 
+    
+        <a href="/zh-CN/profiles/yiding_he">yiding_he</a>, 
+    
+        <a href="/zh-CN/profiles/Brainor">Brainor</a>, 
+    
+        <a href="/zh-CN/profiles/ReyCG_sub">ReyCG_sub</a>, 
+    
+        <a href="/zh-CN/profiles/teoli">teoli</a>, 
+    
+        <a href="/zh-CN/profiles/7anshuai">7anshuai</a>, 
+    
+        <a href="/zh-CN/profiles/xcffl">xcffl</a>, 
+    
+        <a href="/zh-CN/profiles/ziyunfei">ziyunfei</a>, 
+    
+        <a href="/zh-CN/profiles/Asvel">Asvel</a>, 
+    
+        <a href="/zh-CN/profiles/sonzero@163.com">sonzero@163.com</a>, 
+    
+        <a href="/zh-CN/profiles/xiaoxiong">xiaoxiong</a>, 
+    
+        <a href="/zh-CN/profiles/iwo">iwo</a>, 
+    
+        <a href="/zh-CN/profiles/lins05">lins05</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>最后编辑者:</strong>
+                      <a href="/zh-CN/profiles/lemonsWen">lemonsWen</a>,
+                      <time datetime="2017-03-09T20:30:56.015827-08:00">Mar 9, 2017, 8:30:56 PM</time>
+                    </div>
+                  
+                </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">学习 Web 开发的最佳实践</h2>
+        <p class="newsletter-description">注册我们的新闻报：</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev" />
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">电子邮件地址</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required>
+            <label for="newsletterPrivacyInput">
+            我接受 Mozilla 按照<a href="https://www.mozilla.org/privacy/">隐私政策</a>所述的方式处理我的信息。
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">立即注册</button>
+        </div>
+        
+        <p class="newsletter-lang">目前只能提供英文的新闻报。</p>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>谢谢！请检查您的收件箱以确认您的订阅。</h2>
+        <p>如果您以前未确认过订阅 Mozilla 相关的新闻简报，您可能必须这样做。请检查您的收件箱或垃圾邮件箱，找到我们发给您的电子邮件。
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>隐藏新闻报注册</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
+            </div>
+
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="title see-also">另见</div>
+    
+ <ol>
+  <li><a href="/zh-CN/docs/Web/JavaScript"><strong><em>JavaScript</em></strong></a></li>
+  <li><a href="/zh-CN/docs/Web/JavaScript/Tutorials"><strong>教程:</strong></a></li>
+  <li data-default-state="closed"><a href="#">快速入门</a>
+   <ol>
+    <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript 基础知识</a></li>
+    <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript first steps</a></li>
+    <li><a href="/zh-CN/docs/Learn/JavaScript/Building_blocks">JavaScript building blocks</a></li>
+    <li><a href="/zh-CN/docs/Learn/JavaScript/Objects">Introducing JavaScript objects</a></li>
+   </ol>
+  </li>
+  <li data-default-state="closed"><a href="/zh-CN/docs/Web/JavaScript/Guide">JavaScript 指南</a>
+    <ol>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Introduction">Introduction</a></li>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_Types">Grammar and types</a></li>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling">Control flow and error handling</a></li>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration">Loops and iteration</a></li>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Functions">Functions</a></li>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators">Expressions and operators</a></li>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates">Numbers and dates</a></li>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Text_formatting">Text formatting</a></li>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">Regular expressions</a></li>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections">Indexed collections</a></li>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections">Keyed collections</a></li>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects">Working with objects</a></li>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">Details of the object model</a></li>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators">Iterators and generators</a></li>
+      <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Meta_programming">Meta programming</a></li>
+   </ol>
+  </li>
+  <li data-default-state="closed"><a href="#">中级教程</a>
+   <ol>
+    <li><a href="/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript">深入 JavaScript</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Data_structures">JavaScript 数据结构</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness">如何正确判断相等性</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Closures">Closures</a></li>
+   </ol>
+  </li>
+  <li data-default-state="closed"><a href="#">高级</a>
+   <ol>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">继承和原型链</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Typed_arrays">JavaScript 类型化数组</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/SIMD_types">SIMD types</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Memory_Management">内存管理</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/EventLoop">Concurrency model and Event Loop</a></li>
+   </ol>
+  </li>
+  <li><strong><a href="/zh-CN/docs/Web/JavaScript/Reference">引用:</a></strong></li>
+  <li data-default-state="closed"><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects">内置对象</a>
+   <ol><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array" title="JavaScript 数组对象是一个用于构造数组的全局对象; 它们是高级的，列表式的对象。">Array</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" title="一个新的拥有指定大小的ArrayBuffer对象。它的内容都被初始化为0。">ArrayBuffer</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction" title="AsyncFunction 构造函数可以实例化一个 async function 对象。在 JavaScript 中每个异步函数实际上都是 AsyncFunction对象。">AsyncFunction</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Atomics" title="Atomics 对象以静态方法的形式提供原子操作。这些操作使用 SharedArrayBuffer 对象。">Atomics</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="Boolean 对象是一个布尔值的对象包装器。">Boolean</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView" title="DataView视图提供了一个与平台中字节在内存中的排列顺序(字节序)无关的从ArrayBuffer读写多数字类型的底层接口.">DataView</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date" title="创建 Date 实例用来处理日期和时间。Date 对象基于1970年1月1日（世界标准时间）起的毫秒数。">Date</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error" title="通过Error的构造器可以创建一个错误对象。当运行时错误产生时，Error的实例对象会被抛出。Error对象可用于用户自定义的异常的基础对象。下面列出了各种内建的标准错误类型。">Error</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/EvalError" title="本对象代表了一个关于 eval 函数的错误.">EvalError</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Float32Array" title="Float32Array 类型数组代表的是平台字节顺序为32位的浮点数型数组(对应于 C 浮点数据类型) 。 如果需要控制字节顺序， 使用 DataView 替代。其内容初始化为0。一旦建立起来，你可以使用这个对象的方法对其元素进行操作，或者使用标准数组索引语法 (使用方括号)。">Float32Array</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Float64Array" title="Float64Array 类型数组代表的是平台字节顺序为64位的浮点数型数组(对应于 C 浮点数据类型) 。 如果需要控制字节顺序， 使用 DataView 替代。其内容初始化为0。一旦建立起来，你可以使用这个对象的方法对其元素进行操作，或者使用标准数组索引语法 (使用方括号)。">Float64Array</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function" title="Function 构造函数 创建一个新的Function对象。 在 JavaScript 中, 每个函数实际上都是一个Function对象。">Function</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator" title="这个生成器对象是由一个生成器函数 generator function 返回的。并且它是同时遵守 The iterable protocol 可遍历协议和The iterator protocol 迭代器模式协议 .">Generator</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/%E7%94%9F%E6%88%90%E5%99%A8%E5%87%BD%E6%95%B0" title="GeneratorFunction构造器生成新的generator function 对象。在JavaScript中，生成器函数实际上都是GeneratorFunction的实例对象">GeneratorFunction</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="全局属性 Infinity 是一个数值，表示无穷大。">Infinity</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int16Array" title="The Int16Array typed array represents an array of twos-complement 16-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Int16Array</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int32Array" title="The Int32Array typed array represents an array of twos-complement 32-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Int32Array</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int8Array" title="Int8Array 类型数组表示二进制补码8位有符号整数的数组。内容初始化为0。 一旦建立，你可以使用对象的方法引用数组中的元素，或使用标准数组索引语法( 即，使用括号注释)。">Int8Array</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/InternalError" title='InternalError 对象表示出现在JavaScript引擎内部的错误。 例如： "InternalError: too much recursion"（内部错误：递归过深）。'>内部错误</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl" title="国际化的构造函数和其他构造函数的几个语言敏感的方法（可见See also）一样，使用同样的模式来识别语言区域和确定使用哪一种语言格式：他们都接收 locales 和 options 参数，使用 options.localeMatcher 属性指定的一个算法来对比应用请求的和支持的语言区域，来确定使用哪一个语言区域。">Intl</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Collator" title="Intl.Collator 是用于语言敏感字符串比较的 collators构造函数。">Intl.Collator</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat" title="DateTimeFormat实例集成以下原型的属性:">Intl.DateTimeFormat</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat" title="Intl.NumberFormat是对语言敏感的格式化数字类的构造器类">Intl.NumberFormat</a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator" title="Iterator 函数返回一个对象，它实现了遗留的迭代协议，并且迭代了一个对象的可枚举属性。">Iterator</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON" title="JSON 对象包含用于解析 JavaScript Object Notation  (JSON) 的方法，并将值转换为JSON。这个对象本身不能被调用或者作为构造函数，除了它的两个方法属性，它没有本身没有什么有用的功能。">JSON</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map" title="Map对象就是简单的键/值映射。其中键和值可以是任意值(对象或者原始值)。">Map</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math" title="Math 是一个内置对象， 为数学常量和数学函数提供了属性和方法，而不是一个函数对象。">Math</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN" title="全局属性 NaN 表示 Not-A-Number 的值。">NaN</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number" title="JavaScript 的 Number 对象是经过封装的能让你处理数字值的对象。Number 对象由 Number() 构造器创建。">Number</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object" title="Object 构造函数创建一个对象包装器。">Object</a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ParallelArray" title="ParallelArray的目标是在web应用程序中让数据并行.">ParallelArray</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise 对象用于异步计算。一个 Promise 表示一个现在、将来或永不可能可用的值。">Promise</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy" title="Proxy 对象用于定义基本操作的自定义行为 (例如属性查找，赋值，枚举，函数调用等)。">Proxy</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RangeError" title="RangeError对象标明一个错误，当一个值不在其所允许的范围或者集合中。">RangeError</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError" title="ReferenceError（引用错误） 对象表明一个不存在的变量被引用。">ReferenceError</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect" title="Reflect是一个内置的对象，提供可拦截的JavaScript操作的方法。方法与代理处理程序相同。反射不是一个函数对象，因此它不可构造。">Reflect</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp" title="RegExp 构造函数创建了一个正则表达式对象，用于将文本与模式匹配。">RegExp</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SIMD" title='SIMD (pronounced "sim-dee") is short for Single Instruction/Multiple Data which is one classification of computer architectures. SIMD operations perform the same computation on multiple data points resulting in data level parallelism and thus performance gains, for example for 3D graphics and video processing, physics simulations or cryptography, and other domains.'>SIMD</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Bool16x8" title="The SIMD.Bool16x8 data type is a 128-bit vector divided into 8 lanes storing boolean values.">SIMD.Bool16x8</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Bool16x8$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Bool32x4" title="The SIMD.Bool32x4 data type is a 128-bit vector divided into 4 lanes storing boolean values.">SIMD.Bool32x4</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Bool32x4$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Bool64x2" title="The SIMD.Bool64x2 data type is a 128-bit vector divided into 2 lanes storing boolean values.">SIMD.Bool64x2</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Bool64x2$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Bool8x16" title="The SIMD.Bool8x16 data type is a 128-bit vector divided into 16 lanes storing boolean values.">SIMD.Bool8x16</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Bool8x16$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Float32x4" title="The SIMD.Float32x4 data type is a 128-bit vector divided into 4 lanes storing single precision floating point values.">SIMD.Float32x4</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Float32x4$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Float64x2" title="The SIMD.Float64x2 data type is a 128-bit vector divided into 2 lanes storing double precision floating point values.">SIMD.Float64x2</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Float64x2$translate" title="此页面仍未被本地化, ���待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int16x8" title="The SIMD.Int16x8 data type is a 128-bit vector divided into 8 lanes storing 16-bit signed integer values.">SIMD.Int16x8</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int16x8$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int32x4" title="The SIMD.Int32x4 data type is a 128-bit vector divided into 4 lanes storing 32-bit signed integer values.">SIMD.Int32x4</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int32x4$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int8x16" title="The SIMD.Int8x16 data type is a 128-bit vector divided into 16 lanes storing 8-bit signed integer values.">SIMD.Int8x16</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int8x16$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint16x8" title="The SIMD.Uint16x8 data type is a 128-bit vector divided into 8 lanes storing 16-bit unsigned integer values.">SIMD.Uint16x8</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint16x8$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint32x4" title="The SIMD.Uint32x4 data type is a 128-bit vector divided into 4 lanes storing 32-bit unsigned integer values.">SIMD.Uint32x4</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint32x4$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8x16" title="The SIMD.Uint8x16 data type is a 128-bit vector divided into 16 lanes storing 8-bit unsigned integer values.">SIMD.Uint8x16</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8x16$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set" title="集合（Set）对象允许你存储任意类型的唯一值（不能重复），无论它是原始值或者是对象引用。">Set</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer" title="SharedArrayBuffer 对象用来表示一个泛型的，固定长度的原生二进制数据缓冲区，类似于 ArrayBuffer 对象。但在某种程度上，它们能被用于在共享内存上创建视图。与 ArrayBuffer 不同的是，SharedArrayBuffer 不能被移除。">SharedArrayBuffer</a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/StopIteration" title="The StopIteration object is used to tell the end of the iteration in the legacy iterator protocol.">StopIteration</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/StopIteration$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String" title="String 全局对象是一个用于字符串或一个字符序列的构造函数。。">String</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol" title="Symbol 是一种特殊的、不可变的数据类型，可以作为对象属性的标识符使用。Symbol 对象是一个 symbol primitive data type 的隐式对象包装器。">Symbol</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError" title="SyntaxError 对象代表尝试解析语法上不合法的代码的错误。">SyntaxError</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError" title="TypeError（类型错误） 对象用来表示值的类型非预期类型时发生的错误。">TypeError</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray" title="一个TypedArray 对象描述一个表示底层的二进制数据缓存区的类似数组(array-like)视图。没有名为TypedArray的全局属性，也没有直接可见的TypedArray构造函数。相反，有许多不同的全局属性，其值是下面列出的特定元素类型的类型化数组构造函数。在下面的页面中，你会找到可用于包含任何类型的元素的任何类型数组的常见属性和方法">TypedArray</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/URIError" title="The URIError object represents an error when a global URI handling function was used in a wrong way.">URIError</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/URIError$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array" title="The Uint16Array typed array represents an array of 16-bit unsigned integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Uint16Array</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array" title="Uint32Array表示一个由基于平台字节序的32位无符号字节组成的数组.如果需要对字节顺序进行控制(译者注:即 littleEndian 或 bigEndian),请使用DataView代替.数组中每个元素的初始值都是0.一旦创建，你可以用对象的方法引用数组里的元素，或者使用标准的数组索引语法（即，使用中括号）。">Uint32Array</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array" title="Uint8Array 数组类型表示一个8位无符号整型数组，创建时内容被初始化为0。创建完后，可以以对象的方式或使用数组下标索引的方式引用数组中的元素。">Uint8Array</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray" title="The Uint8ClampedArray typed array represents an array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of [0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Uint8ClampedArray</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap" title="WeakMap 对象是键/值对的集合，且其中的键是弱引用的。其键只能是对象，而值则可以是任意的。">WeakMap</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakSet" title="一个 WeakSet 对象是一个无序的集合, 可以用它来存储任意的对象值, 并且对这些对象值保持弱引用.">WeakSet</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly" title="The WebAssembly JavaScript object acts as the namespace for all WebAssembly-related functionality.">WebAssembly</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/decodeURI" title="decodeURI() 方法用于解码由 encodeURI 方法或者其它类似方法编码的统一资源标识符（URI）">decodeURI()</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent" title="decodeURIComponent() 方法用于解码由 encodeURIComponent 方法或者其它类似方法编码的部分统一资源标识符（URI）。">decodeURIComponent()</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI" title="encodeURI() 是对统一资源标识符（URI）进行编码的方法。它使用1到4个转义序列来表示每个字符的UTF-8编码（只有由两个代理字符区组成的字符才用四个转义字符编码）。">encodeURI()</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" title="encodeURIComponent()是对统一资源标识符（URI）的组成部分进行编码的方法。它使用一到四个转义序列来表示字符串中的每个字符的UTF-8编码（只有由两个Unicode代理区字符组成的字符才用四个转义字符编码）。">encodeURIComponent()</a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/escape" title="废弃的 escape() 方法生成新的由十六进制转义序列替换的字符串. 使用 encodeURI 或 encodeURIComponent 代替.">escape()</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval" title="执行指定的代码之后的完整值。如果完整值为空，返回undefined">eval()</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite" title="该全局 isFinite() 函数用来判断被传入的参数值是否为一个有限数值（finite number）。在必要情况下，参数会首先转为一个数值。">isFinite()</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN" title="isNaN() 函数用来判断一个值是否为 NaN。注：isNaN函数包含一些非常有意思的强制转换规则；你也可以通过 ECMAScript 6 中定义的 Number.isNaN() 或者 typeof 来判断一个值是否为非数值。">isNaN()</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null" title='值 null 是一个 JavaScript 字面量，表示空值（null or an "empty" value），即没有对象被呈现（no object value is present）。它是 JavaScript 原始值 之一。'>null</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseFloat" title="parseFloat()方法将参数中指定的字符串解析成为一个浮点数字并返回.">parseFloat</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt" title="概述">parseInt</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined" title="undefined是全局对象的一个属性。也就是说，它是全局作用域的一个变量。undefined的最初值就是原始数据类型undefined。">undefined</a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/unescape" title="已废弃的 unescape() 方法计算生成一个新的字符串，其中的十六进制转义序列将被其表示的字符替换。上述的转义序列就像escape里介绍的一样。因为 unescape 已经废弃，建议使用 decodeURI或者decodeURIComponent 替代本方法。">unescape()</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/uneval" title="uneval() 函数创建一个代表对象的源代码的字符串。">uneval()</a></li></ol>
+  </li>
+  <li data-default-state="closed"><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators">表达式和运算符</a>
+   <ol><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators" title="算术运算符（Arithmetic operators）把数值（原始值或变量）作为它们的操作数（operand），然后返回一个单数值。标准的算术运算符有加 (+)，减 (-)，乘(*)，除(/)。">算术运算符</a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Array_comprehensions" title="数组推导式是一种新的 JavaScript 表达式语法，使用它，你可以在一个原有数组的基础上快速的构造出（推导出）一个新的数组。">数组推导式</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators" title="赋值运算符（assignment operator）基于右值（right operand）的值，给左值（left operand）赋值。">赋值运算符</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="按位操作符（Bitwise operators） 将其操作数（operands）当作32位的比特序列（由0和1组成），而不是十进制、十六进制或八进制数值。例如，十进制数9，用二进制表示则为1001。按位操作符操作数字的二进制形式，但是返回值依然是标准的JavaScript数值。">按位操作符</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_Operator" title="逗号操作符 对它的每个操作对象求值（从左至右），然后返回最后一个操作对象的值。">逗号操作符</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="JavaScript 有两种比较方式：严格比较运算符和转换类型比较运算符。对于严格比较运算符（===）来说，仅当两个操作数的类型相同且值相等为 true，而对于被广泛使用的比较运算符（==）来说，会在进行比较之前，将两个操作数转换成相同的类型。对于关系运算符（比如 &lt;=）来说，会先将操作数转为原始值，使它们类型相同，再进行比较运算。">比较操作符</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" title="条件（三元）运算符是 JavaScript 仅有的使用三个操作数的运算符。本运算符经常作为 if 语句的简短形式来使用。">条件运算符</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" title="解构赋值（destructuring assignment）语法是一个Javascript表达式，它使得从数组或者对象中提取数据赋值给不同的变量成为可能。">解构赋值</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Expression_closures" title="表达式闭包是定义简单函数的一种便捷方式。">Expression closures</a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions" title="Generator推导式是一个让你通过基于现存可迭代的项目快速组合一个新的Gennerator功能的Javascript表达式。推导式存在于很多编程语言当中，并且在即将到来的ECMAScript7标准中，为Javascript定义了数组概念。">Generator推导式</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Grouping" title="圆括号运算符( ) 用来控制表达式中的运算优先级.">圆括号运算符</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Legacy_generator_function" title="function 关键字可以用于在表达式中定义旧式的生成器函数。为使定义的函数为一个旧式的生成器函数，该函数的函数体中需要至少包含一个 yield 表达式。">旧式生成器函数</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators" title="逻辑运算符通常用于布尔型（逻辑）值；这种情况，它们返回一个布尔型值。然而，&amp;&amp;和||运算符实际上返回一个指定操作数的值，因此这些运算符也用于非布尔型，它们返回一个非布尔型值。">逻辑运算符</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer" title="对象可以通过 new Object(), Object.create() 方法， 或者使用字面 标记 (初始化 标记)初始化。 对象初始化，由花括号{}包含的一个由0个或者多个对象属性名和关联值组成的列表构成。">Object initializer</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" title="运算符的优先级决定了表达式中运算执行的先后顺序，优先级高的运算符最先被执行。">运算符优先级</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors" title="属性访问器提供了两种方式用于访问一个对象的属性，它们分别是点符号和括号。">Property accessors</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator" title="扩展语法允许在需要多个参数（用于函数调用）或多个元素（用于数组文本）或多个变量（用于解构分配）的位置扩展表达式。">扩展语句</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/async%E5%85%81%E8%AE%B8%E5%A3%B0%E6%98%8E%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%8C%85%E5%90%AB%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E7%9A%84%E5%87%BD%E6%95%B0" title="async function 关键字可以用来定义一个异步函数表达式。">async function表达式</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/await" title="await 操作符被用来等待 async function 返回的 promise。">await</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/class" title="类表达式是用来定义类的一种语法。和函数表达式相同的一点是，类表达式可以是命名也可以是匿名的。如果是命名类表达式，这个名字只能在类体内部才能访问到。JavaScript 的类也是基于原型继承的。">类表达式</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/delete" title="delete 操作符用来删除一个对象的属性。">delete</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/function" title="function 关键字可用来在一个表达式中定义一个函数。">函数表达式</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/function*" title="function*关键字可以在表达式内部定义一个生成器函数。">function* expression</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/in" title="如果指定的属性存在于指定的对象中，则 in 运算符会返回 true。">in</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof" title="instanceof 运算符用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性。">instanceof</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new" title="(new operator) 新运算符创建一个用户定义的对象类型的实例或具有构造函数的内置对象类型之一。">new运算符</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target" title='new.target语法由一个关键字"new"，一个点，和一个属性名"target"组成。通常"new."的作用是提供属性访问的上下文，但这里"new."其实不是一个真正的对象。不过在构造方法调用中，new.target指向被new调用的构造函数，所以"new."成为了一个虚拟上下文。'>new.target</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/super" title="super 关键字用于调用一个对象的父对象上的函数。">super</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/this" title="与其他语言相比，函数的 this 关键字在JavaScript中的行为略有不同。它在严格模式和非严格模式之间也有一些区别。">this</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof" title="typeof操作符返回一个字符串,指示未经计算的操作数的类型。">typeof</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/void" title="void 运算符会对给定的表达式进行求值，然后直接返回 undefined。">void 运算符</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/yield" title="yield 关键字用来暂停和继续一个生成器函数 (function* or legacy generator).">yield</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/yield*" title="在生成器中，yield* 可以把需要 yield 的值委托给另外一个生成器或者其他任意的可迭代对象。">yield*</a></li></ol>
+  </li>
+  <li data-default-state="closed"><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements">语句和声明</a>
+   <ol><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function" title="遗留的生成器函数语句 使用特殊参数声明遗留的生成器函数。">遗留的生成器函数</a></li><li><span class="sidebar-icon"><span title="这是一个实验性的 API，请尽量不要在生产环境中使用它。"><i class="icon-beaker"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function" title="调用异步函数时会返回一个 promise 对象。当这个异步函数返回一个值时，promise 的 resolve 方法将会处理这个返回值；当异步函数抛出的是异常或者非法值时，promise 的 reject 方法将处理这个异常值。">async function</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/block" title="语句块 (或其他语言中的 复合语句) 用来组织零个或多条语句. 用一对花括号界定���句块.">block</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/break" title="break 语句 中止当前循环，switch 语句或 label 语句，并把程序控制流转到紧接着被中止语句后面的语句。">break</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/class" title="关键字创建一个基于原型继承的新类(译者注：ES6新加入的class关键字是语法糖，本质还是函数)">class</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/const" title="Editorial review completed.">const</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/continue" title="continue 语句结束当前（或标签）的循环语句的本次迭代，并继续执行循环的下一次迭代。">continue</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/debugger" title="调用任何一个可用的调试器,如果没有调试器可用,则该语句没有任何效果.">debugger</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/default" title="关键词 default 可以在JavaScript中的这两种情况下使用：在 switch 中的时候，或者在 export 中使用时。">default</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/do...while" title="do...while 语句创建了一个循环,该循环执行一个指定的语句直到condition 的值为 false. condition 在执行statement后才会被赋值,statement至少执行一次.">do...while</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/Empty" title="empty 语句 用来表明没有语句, 尽管JavaScript语法希望有语句会被执行.">empty</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/export" title="export 语句用于从给定的文件 (或模块) 中导出函数，对象或原语。">export</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for" title="for语句用于创建一个循环,它包含了三个可选的表达式,三个可选的表达式包围在圆括号中并由分号分隔,后面跟随一个语句或一组语句在循环中执行.">for</a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for_each...in" title="使用一个变量迭代一个对象的所有属性值,对于每一个属性值,有一个指定的语句块被执行.">for each...in</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in" title="以任意序迭代一个对象的可枚举属性。每个不同的属性，语句都会被执行一次。">for...in</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of" title="for...of语句在可迭代对象(包括 Array, Map, Set, String, TypedArray，arguments 对象等等)上创建一个迭代循环，对每个不同属性的属性值,调用一个自定义的有执行语句的迭代挂钩.">for...of</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/function" title="函数声明定义一个具有指定参数的函数。">function</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/function*" title="function* 声明 (function关键字后跟一个星号）定义了一个生成器函数 (generator function)，它返回一个  Generator  对象。">function*</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else" title="当指定条件为 true 时，if 语句 会执行一条语句。如果该条件为 false，则执行另一条语句。">if...else</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/import" title="import 语句用于导入从外部模块，另一个脚本等导出的函数，对象或原语。">import</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/label" title="标记语句（labeled statement）可以和 break 或 continue 语句一起使用。标记就是在一条语句前面加个可以引用的标识符（identifier）。">label</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/let" title="let允许你声明一个作用域被限制在块级中的变量、语句或者表达式。与var关键字不同的是，var声明的变量只能是全局或者整个函数块的。">let</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/return" title="return 语句终止函数的执行，并返回一个指定的值给函数调用者。">return</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/switch" title="switch语句对一个表达式求值，将结果与 case 子语句比较，如果匹配，则从 case 处的语句向下执行。">switch</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/throw" title="throw 语句用来抛出用户自定义异常。当前函数的执行将会被中止（throw之后的语句将会得不到执行），接着执行流程会转移到第一个 catch 语句块。如果在调用方函数中没有任何catch语句块，那么程序将会被中止。">throw</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch" title="try...catch语句将能引发错误的代码放在try块中，并且对应一个响应，然后有异常被抛出。">try...catch</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/var" title="var声明了一个变量，并且可以同时初始化该变量。">var</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/while" title="while 语句可以在某个条件表达式为真的前提下，循环执行指定的一段代码，直到那个表达式不为真时结束循环。">while</a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/with" title="with语句的作用是扩展作用域链（scope chain）。">with</a></li></ol>
+  </li>
+  <li data-default-state="closed"><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions">函数</a>
+   <ol><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments 是一个类似数组的对象, 对应于传递给函数的参数。">arguments</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions" title="箭头函数表达式的语法比函数表达式短，并且不绑定自己的 this，arguments，super或 new.target。此外，箭头函数总是匿名的。这些函数表达式最适合非方法函数，它们不能用作构造函数。">箭头函数</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters" title="如果一个形参没有被传入对应的实参或者传入了undefined,则该形参会被赋一个默认值.">默认参数值</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions" title="ECMAScript从ECMAScript6开始，引入了一种更简短的在对象初始器中定义方法的语法，这是一种把方法名直接赋给函数的简写方式。">方法的定义</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters" title="剩余参数（rest parameter）允许长度不确定的实参表示为一个数组。">剩余参数</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/get" title="get 语句作为函数绑定在对象的属性上,当访问该属性时调用该函数.">getter</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/set" title="Editorial review completed.">setter</a></li></ol>
+  </li>
+  <li data-default-state="closed"><a href="/zh-CN/docs/Web/JavaScript/Reference/Classes">Classes</a>
+   <ol><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor" title="constructor 是和 class 一起用来创建和初始化对象的特殊方法。">构造方法</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Classes/extends" title="extends关键词被用在类声明或者类表达式上，以创建一个类的子类。">extends</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Classes/static" title="static 关键字为一个类定义了一个静态方法。">static</a></li></ol>
+  </li>
+  <li data-default-state="closed"><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors">Errors</a>
+   <ol><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Property_access_denied" title="错误.">Error: Permission denied to access property "x"</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Too_much_recursion" title="内部错误.">InternalError: too much recursion</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint" title="RangeError">RangeError: argument is not a valid code point</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_array_length" title="RangeError">RangeError: invalid array length</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_date" title="RangeError">RangeError: invalid date</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_date$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Precision_range" title="RangeError">RangeError: precision is out of range</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_radix" title="RangeError">RangeError: radix must be an integer</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Resulting_string_too_large" title="RangeError">RangeError: repeat count must be less than infinity</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Negative_repetition_count" title="RangeError">RangeError: repeat count must be non-negative</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined" title="ReferenceError.">ReferenceError: "x" is not defined</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Undeclared_var" title="仅在严格模式中出现 ReferenceError 警告。">ReferenceError: assignment to undeclared variable "x"</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage" title="仅在严格模式下出现的 ReferenceError 警告。JavaScript 的执行将不会停止。">ReferenceError: deprecated caller or arguments usage</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side" title="ReferenceError.">ReferenceError: invalid assignment left-hand side</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Undefined_prop" title="仅在 strict mode 下出现 ReferenceError 警告。">ReferenceError: reference to undefined property "x"</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params" title="SyntaxError.">SyntaxError: "use strict" not allowed in function with non-simple parameters</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_octal" title="仅在 strict mode 下出现 SyntaxError 警告。">SyntaxError: "x" is not a legal ECMA-262 octal constant</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/JSON_bad_parse" title="SyntaxError">SyntaxError: JSON.parse: bad parsing</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter" title="SyntaxError">SyntaxError: Malformed formal parameter</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Unexpected_token" title="SyntaxError">SyntaxError: Unexpected token</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma" title="SyntaxError 的警告。不会终止 JavaScript 的执行。">SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list" title="SyntaxError.">SyntaxError: missing ) after argument list</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement" title="SyntaxError.">SyntaxError: missing ; before statement</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Missing_bracket_after_list" title="SyntaxError.">SyntaxError: missing ] after element list</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Missing_curly_after_property_list" title="SyntaxError">SyntaxError: missing } after property list</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter" title="SyntaxError">SyntaxError: redeclaration of formal parameter "x"</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield" title="SyntaxError.">SyntaxError: return not in function</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Equal_as_assign" title="SyntaxError 只在严格模式下会出现的警告。">SyntaxError: test for equality (==) mistyped as assignment (=)?</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal" title="SyntaxError">SyntaxError: unterminated string literal</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/No_properties" title="TypeError.">TypeError: "x" has no properties</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Unexpected_type" title="TypeError.">TypeError: "x" is (not) "y"</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_a_constructor" title="TypeError">TypeError: "x" is not a constructor</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_a_function" title="TypeError">TypeError: "x" is not a function</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Read-only" title="TypeError">TypeError: "x" is read-only</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/More_arguments_needed" title="TypeError.">TypeError: More arguments needed</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Array_sort_argument" title="TypeError">TypeError: invalid Array.prototype.sort argument</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_delete" title="TypeError 只出现在严格模式下。">TypeError: property "x" is non-configurable and can't be deleted</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Var_hides_argument" title="TypeError 警告仅仅在 严格模式下 出现。">TypeError: variable "x" redeclares argument</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Already_has_pragma" title="一个警告。JavaScript 的执行不会中止。">Warning: -file- is being assigned a //# sourceMappingURL, but already has one</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat" title="Warning. JavaScript execution won't be halted.">Warning: Date.prototype.toLocaleFormat is deprecated</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated" title="警告">Warning: JavaScript 1.6's for-each-in loops are deprecated</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Deprecated_String_generics" title="Warning. JavaScript execution won't be halted.">Warning: String.x is deprecated; use String.prototype.x instead</a> <a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Deprecated_String_generics$translate" title="此页面仍未被本地化, 期待您的翻译!" style="opacity: 0.5;">[我来译!]</a></li><li><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Stmt_after_return" title="警告">Warning: unreachable code after return statement</a></li></ol>
+  </li>
+  <li data-default-state="closed"><a href="#">更多</a>
+   <ol>
+    <li><a href="/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript 知识概要</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar">词法文法</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Data_structures">JavaScript 数据结构</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">属性的可枚举性和所有权</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode">切换到严格模式</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Template_literals">模板字符串</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features">已废弃的特性</a></li>
+   </ol>
+  </li>
+  <li data-default-state="closed"><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript">New in JavaScript</a>
+   <ol><li><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla" title="">Mozilla对ECMAScript 6的支持</a></li><li><a href="/zh-CN/docs/JavaScript/ECMAScript_5_support_in_Mozilla" title="">Mozilla对ECMAScript 5的支持</a></li><li><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_7_support_in_Mozilla" title="下一代ECMAScript 是指在ECMAScript 6 (ES2015)被推出后的 ECMA-262标准的新特性(通常被称为 JavaScript). 即使在ECMAScript 6 于2015年6月17日完成之前，新的特性也早已在提议中. 你可以在 tc39/ecma262 这个仓库中看见最新版的提议.">Mozilla对下一代ECMAScript 的支持</a></li><li><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript/Firefox_JavaScript_changelog" title="下面是Firefox发布版本的JavaScript日志更新情况。">Firefox中的JavaScript更新日志</a></li><li><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript/1.1" title='下面介绍的是JavaScript从Netscape Navigator 2.0到3.0的更新日志。旧的Netscape文档请参考"第1版之后新增的特性"。Netscape Navigator 3.0在1996年8月19发布，是支持JavaScript的浏览器的第二个主要的版本。'>JavaScript 1.1的新特性</a></li><li><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript/1.2" title="下面介绍的是JavaScript从Netscape Navigator 3.0到4.0的更新日志。旧的Netscape文档可以在archive.org上面找到。Netscape Navigator 4.0在1997年6月11日发布，它是是支持JavaScript的浏览器的第三个主要的版本。">JavaScript 1.2的新特性</a></li><li><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript/1.3" title="下面介绍的是JavaScript从Netscape Navigator 4.0到4.5的更新日志。旧的Netscape文档可以在archive.org上面找到。Netscape Navigator 4.5是在1998年10月19日发布的。">JavaScript 1.3的新特性</a></li><li><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript/1.4" title="下面是 JavaScript 1.4 的更新记录，它只可用于 1999 年发布的 Netscape 服务端 JavaScript。 旧的 Netscape 文档可在 archive.org 找到。">JavaScript 1.4的新特性</a></li><li><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript/1.5" title="以下为JavaScript 1.5 的更新日志。该版本包含在发行于2000年11月14日的Netscape Navigator 6.0中，也在后续的的Netscape Navigator版本和Firefox 1.0中使用。你可以拿JavaScript 1.5 和JScript version 5.5，Internet Explorer 5.5进行比较，后者发行于2000年7月。相应的ECMA 标准是 ECMA-262 Edition 3版 (自1999年12月)。">JavaScript 1.5 的新特性</a></li><li><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript/1.6" title="">JavaScript 1.6 的新特性</a></li><li><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript/1.7" title="">New in JavaScript 1.7</a></li><li><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript/1.8" title="以下为JavaScript 1.8的更新日志。JavaScript 1.8 是 Gecko 1.9（已合并在 Firefox 3 中）的一部分。参见 bug 380236 以跟踪 JavaScript 1.8。">New in JavaScript 1.8</a></li><li><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript/1.8.1" title="下面是JavaScript 1.8.1 的更新内容. 该版本已包含在 Firefox 3.5 中.">JavaScript 1.8.1 的新特性</a></li><li><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript/1.8.5" title="下面的内容是JavaScript 1.8.5的更新记录. 该版本已包含在Firefox 4中.">JavaScript 1.8.5 的新特性</a></li></ol>
+  </li>
+  <li><strong><a href="/zh-CN/docs/MDN">文档:</a></strong></li>
+  <li data-default-state="closed"><a href="#">常用列表</a>
+   <ol>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Index">全部页面索引</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Methods_Index">方法索引</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Properties_Index">属性索引</a></li>
+    <li><a href="/zh-CN/docs/tag/JavaScript">拥有 "JavaScript" 标签的页面</a></li>
+   </ol>
+  </li>
+  <li data-default-state="closed"><a href="#">贡献</a>
+   <ol>
+    <li><a href="/zh-CN/docs/MDN/Doc_status/JavaScript">JavaScript 文档翻译状态</a></li>
+    <li><a href="/zh-CN/docs/MDN">MDN 项目</a></li>
+   </ol>
+  </li>
+ </ol>
+
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/zh-CN/docs/Web/JavaScript$edit" label="编辑页面"></menuitem>
+    <menuitem data-action="/zh-CN/docs/Web/JavaScript$history" label="查看页面历史"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>&copy; 2005-2017 Mozilla 开发者网络及各贡献者</p> <p>内容可按<a href="/en-US/docs/MDN/About#Copyrights_and_licenses">这些许可协议</a>使用。</p>
+          <ul>
+            <li><a href="/docs/MDN/About">关于 MDN</a></li>
+            <li><a href="//www.mozilla.org/about/legal/terms/mozilla">条款</a></li>
+            <li><a href="//www.mozilla.org/privacy/websites/">隐私</a></li>
+            <li><a href="//www.mozilla.org/privacy/websites/#cookies">Cookie</a></li>
+            <li><a href="//github.com/mozilla/kuma">贡献代码</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+  
+    <form class="languages go" method="get" action="/zh-CN/docs/Web">
+      <label for="language">其他语言：</label>
+      <select id="language" class="wiki-l10n" name="next" dir="ltr">
+        <option title="简体中文" value="/zh-CN/docs/Web/JavaScript" selected>
+          中文 (简体) (zh-CN)
+        </option>
+        
+          <option title="英语 (美国)" value="/en-US/docs/Web/JavaScript">
+            English (US) (en-US)
+          </option>
+          <option title="阿拉伯语" value="/ar/docs/Web/JavaScript">
+            عربي (ar)
+          </option>
+          <option title="班巴拉语" value="/bm/docs/Web/JavaScript">
+            Bamanankan (bm)
+          </option>
+          <option title="孟加拉语 (孟加拉)" value="/bn-BD/docs/Web/JavaScript">
+            বাংলা (বাংলাদেশ) (bn-BD)
+          </option>
+          <option title="孟加拉语 (印度)" value="/bn-IN/docs/Web/%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%8D%E0%A6%9F">
+            বাংলা (ভারত) (bn-IN)
+          </option>
+          <option title="加泰罗尼亚语" value="/ca/docs/Web/JavaScript">
+            Català (ca)
+          </option>
+          <option title="捷克语" value="/cs/docs/Web/JavaScript">
+            Čeština (cs)
+          </option>
+          <option title="德语" value="/de/docs/Web/JavaScript">
+            Deutsch (de)
+          </option>
+          <option title="希腊语" value="/el/docs/Web/JavaScript">
+            Ελληνικά (el)
+          </option>
+          <option title="西班牙语" value="/es/docs/Web/JavaScript">
+            Español (es)
+          </option>
+          <option title="波斯语" value="/fa/docs/Web/JavaScript">
+            فارسی (fa)
+          </option>
+          <option title="法语" value="/fr/docs/Web/JavaScript">
+            Français (fr)
+          </option>
+          <option title="希伯来语" value="/he/docs/Web/JavaScript">
+            עברית (he)
+          </option>
+          <option title="印地语 (印度)" value="/hi-IN/docs/Web/JavaScript">
+            हिन्दी (भारत) (hi-IN)
+          </option>
+          <option title="匈牙利语" value="/hu/docs/Web/JavaScript">
+            magyar (hu)
+          </option>
+          <option title="印尼语" value="/id/docs/Web/JavaScript">
+            Bahasa Indonesia (id)
+          </option>
+          <option title="意大利语" value="/it/docs/Web/JavaScript">
+            Italiano (it)
+          </option>
+          <option title="日语" value="/ja/docs/Web/JavaScript">
+            日本語 (ja)
+          </option>
+          <option title="格鲁吉亚语" value="/ka/docs/Web/JavaScript">
+            ქართული (ka)
+          </option>
+          <option title="卡拜尔语" value="/kab/docs/Web/JavaScript">
+            Taqbaylit (kab)
+          </option>
+          <option title="朝鲜语" value="/ko/docs/Web/JavaScript">
+            한국어 (ko)
+          </option>
+          <option title="马来语" value="/ms/docs/Web/JavaScript">
+            Melayu (ms)
+          </option>
+          <option title="缅甸语" value="/my/docs/Web/JavaScript">
+            မြန်မာဘာသာ (my)
+          </option>
+          <option title="荷兰语" value="/nl/docs/Web/JavaScript">
+            Nederlands (nl)
+          </option>
+          <option title="波兰语" value="/pl/docs/Web/JavaScript">
+            Polski (pl)
+          </option>
+          <option title="葡萄牙语 (巴西)" value="/pt-BR/docs/Web/JavaScript">
+            Português (do Brasil) (pt-BR)
+          </option>
+          <option title="葡萄牙语 (葡萄牙)" value="/pt-PT/docs/Web/JavaScript">
+            Português (Europeu) (pt-PT)
+          </option>
+          <option title="罗马尼亚语" value="/ro/docs/Web/JavaScript">
+            Română (ro)
+          </option>
+          <option title="俄语" value="/ru/docs/Web/JavaScript">
+            Русский (ru)
+          </option>
+          <option title="瑞典语" value="/sv-SE/docs/Web/JavaScript">
+            Svenska (sv-SE)
+          </option>
+          <option title="泰米尔语" value="/ta/docs/Web/JavaScript">
+            தமிழ் (ta)
+          </option>
+          <option title="泰语" value="/th/docs/Web/JavaScript">
+            ไทย (th)
+          </option>
+          <option title="土耳其语" value="/tr/docs/Web/JavaScript">
+            Türkçe (tr)
+          </option>
+          <option title="乌克兰语" value="/uk/docs/Web/JavaScript">
+            Українська (uk)
+          </option>
+          <option title="越南语" value="/vi/docs/Web/JavaScript">
+            Tiếng Việt (vi)
+          </option>
+          <option title="繁体中文" value="/zh-TW/docs/Web/JavaScript">
+            正體中文 (繁體) (zh-TW)
+          </option>
+      </select>
+      <noscript><button type="submit">转到</button></noscript>
+    </form>
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/main.660aa2a4bc00.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/jsi18n/zh-cn/javascript.73bd5bb239df.js"></script>
+  
+    <script async type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/wiki.7114338e4daa.js" charset="utf-8"></script>
+
+
+  
+
+  
+    <script type="text/javascript">
+        (function($) {
+            $('#wikiArticle').children('h2[id]').each(function() {
+                var id = $(this).attr('id');
+                var href = '/zh-CN/docs/Web/JavaScript$edit#' + id;
+
+                $('<a>').attr({
+                    href: href,
+                    'class': 'button section-edit only-icon',
+                    'rel': 'nofollow, noindex'
+                })
+                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
+                .append($('<span>'))
+                .find('span')
+                .text(gettext('Edit'))
+                .end()
+                .on('click', function(e) {
+                    e.preventDefault();
+
+                    mdn.analytics.trackEvent({
+                        category: 'Section Edit',
+                        action: id
+                    }, function() {
+                        window.location = href;
+                    });
+                })
+                .appendTo(this);
+            });
+        })(jQuery);
+    </script>
+  
+
+  
+
+  
+    <script async type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
+  
+
+
+</body>
+</html>
